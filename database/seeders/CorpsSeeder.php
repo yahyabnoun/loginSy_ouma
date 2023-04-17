@@ -13,10 +13,14 @@ class CorpsSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('corps')->insert([
+        DB::table('corps')->insert([[
             'id' => 1,
             'nom' => 'Administrateurs'
-        ]);
-        
+        ],[
+            'id' => 2,
+            'nom' => 'Adjoint technique'
+        ]
+    ]);
+
     }
 }

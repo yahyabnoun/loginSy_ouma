@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CorpsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('recherch');
-});
+// Route::get('/', function () {
+//     return view('recherch');
+// });
+
+
+Route::get('/',[CorpsController::class, 'index']);
+Route::get('/get_grades',[CorpsController::class, 'get_grades']);

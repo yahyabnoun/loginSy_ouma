@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <title>Laravel</title>
@@ -10,7 +11,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <script src=" asset('../js/HandelSelect.js')"></script>
+        @vite('resources/js/app.js')
 
         <!-- Styles -->
         <style>
@@ -65,20 +66,19 @@
 
 
               <div class="col-md-4">
-                <label for="inputCorps" class="form-label">corps:</label>
-                <select class="form-select" aria-label="Default select example">
-                                      <option selected>Open this select menu</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
+                <label  for="inputCorps" class="form-label">corps:</label>
+                <select id="corps" class="form-select" aria-label="Default select example">
+                    @foreach ($corps as $co)
+                        <option value="{{$co->id}}">{{$co->nom}}</option>
+                    @endforeach
                  </select>
               </div>
 
 
               <div class="col-md-2">
-                <label for="inputGrade" class="form-label">Grade:</label>
-                <select class="form-select" aria-label="Default select example">
-                                      <option selected>Open this select menu</option>
+                <label  for="inputGrade" class="form-label">Grade:</label>
+                <select id="Grade" class="form-select" aria-label="Default select example">
+                                      <option selected>select Grade</option>
                                       <option value="1">One</option>
                                       <option value="2">Two</option>
                                       <option value="3">Three</option>
