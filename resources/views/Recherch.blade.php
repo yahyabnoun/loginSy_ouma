@@ -22,50 +22,44 @@
         <div class="containre">
             <form class="row g-3" action="" method="GET" style="padding:10% " >
               <div class="col-md-6">
-                <label for="inputNome" class="form-label">Nom:</label>
+                <label for="inputNome" class="form-label">Nom :</label>
                 <input type="text" name="nom" class="form-control" id="inputNome">
               </div>
               <div class="col-md-6">
-                <label for="inputPrénome" class="form-label">Prénom:</label>
+                <label for="inputPrénome" class="form-label">Prénom :</label>
                 <input type="text" name="prenom" class="form-control" id="inputPrénome">
               </div>
 
 
               <div class="col-6">
-                <label for="inputPole" class="form-label">Pole:</label>
-                <select name="pole" class="form-select" aria-label="Default select example">
-                                      <option  value="0" selected>pole macroéconomie</option>
-                                      <option value="1">pole des relation avec l'afrique et l'europe</option>
-                                      <option value="2">pole secteur financier</option>
-                                      <option value="3">pole Dette</option>
-                                      <option value="4">pole relation avec les pays arabes,l'asie,l'amérique et les institutions international</option>
+                <label for="inputPole" class="form-label">Pole : </label>
+                <select id="pole" name="pole" class="form-select" aria-label="Default select example">
+                    <option selected>Select pole</option>
+                        @foreach ($poles as $pole)
+                            <option value="{{$pole->id}}">{{$pole->nom}}</option>
+                        @endforeach
                  </select>
               </div>
 
 
               <div class="col-6">
-                <label for="inputDivision" class="form-label">Division:</label>
-                <select class="form-select" aria-label="Default select example">
-                                      <option selected>division des finances publiques</option>
-                                      <option value="1">division de </option>
-                                      <option value="2"></option>
-                                      <option value="3"></option>
+                <label for="inputDivision" class="form-label">Division : </label>
+                <select id="division" name="division"  class="form-select" aria-label="Default select example">
+                        <option selected>Select division</option>
                 </select>
               </div>
 
 
               <div class="col-md-6">
-                <label for="inputService" class="form-label">service:</label>
-                <select class="form-select" aria-label="Default select example">
-                                      <option selected>Open this select menu</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
+                <label for="inputService" class="form-label">Service : </label>
+                <select id="services" name="services" class="form-select" aria-label="Default select example">
+                                      <option selected>Select services</option>
+
                 </select>
               </div>
 
 
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <label  for="inputCorps" class="form-label">corps:</label>
                 <select id="corps" class="form-select" aria-label="Default select example">
                     <option selected>Select corps</option>
@@ -76,7 +70,7 @@
               </div>
 
 
-              <div class="col-md-2">
+              <div class="col-md-3">
                 <label  for="inputGrade" class="form-label">Grade:</label>
                 <select id="Grade" class="form-select" aria-label="Default select example">
                                       <option selected>Select Grade</option>
