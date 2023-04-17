@@ -11,7 +11,7 @@ $(document).ready(function() {
                      success: function(data) {
                         $('#Grade').empty()
 
-                        $('#Grade').append('<option value="">  </option>');
+                        $('#Grade').append('<option  >Select Grade  </option>');
 
                         // console.log(data);
                     $.each(data, function(key, value) {

@@ -68,6 +68,7 @@
               <div class="col-md-4">
                 <label  for="inputCorps" class="form-label">corps:</label>
                 <select id="corps" class="form-select" aria-label="Default select example">
+                    <option selected>Select corps</option>
                     @foreach ($corps as $co)
                         <option value="{{$co->id}}">{{$co->nom}}</option>
                     @endforeach
@@ -78,10 +79,7 @@
               <div class="col-md-2">
                 <label  for="inputGrade" class="form-label">Grade:</label>
                 <select id="Grade" class="form-select" aria-label="Default select example">
-                                      <option selected>select Grade</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
+                                      <option selected>Select Grade</option>
                 </select>
               </div>
 
