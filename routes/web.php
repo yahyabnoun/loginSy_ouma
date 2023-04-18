@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CorpsController;
 use App\Http\Controllers\PolesController;
+use App\Http\Controllers\FilterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,6 @@ Route::get('/get_grades',[CorpsController::class, 'get_grades']);
 Route::get('/get_division',[PolesController::class, 'get_division']);
 Route::get('/get_services',[PolesController::class, 'get_services']);
 
+///////////////////////////////////////////
+
+Route::get('/employes',[FilterController::class, 'filteremployes']);
